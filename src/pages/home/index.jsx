@@ -5,6 +5,7 @@ import PostCard from '../../components/PostCard';
 import PostCardSmall from '../../components/PostCardSmall';
 import Ads from '../../components/Ads';
 import EditorsPickCard from '../../components/EditorsPickCard';
+import DoubleLine from '../../components/DoubleLine';
 
 const HomePage = () => {
   return (
@@ -41,9 +42,9 @@ const HomePage = () => {
       <section>
         <div className='flex flex-col mt-5'>
           <div className=' flex items-center gap-8 py-8 '>
-            <div className='border-y h-1 w-full'></div>
+            <DoubleLine />
             <div className='font-extrabold text-[30px] font-outfit w-fit text-nowrap'>Editor's Picks</div>
-            <div className='border-y h-1 w-full'></div>
+            <DoubleLine />
           </div>
 
           <div className='flex justify-between'>
