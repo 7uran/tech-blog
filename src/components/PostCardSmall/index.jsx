@@ -2,7 +2,7 @@ import React from 'react';
 import { TbSquareRotatedFilled } from 'react-icons/tb';
 
 const PostCardSmall = ({ img, type, title, date }) => {
-    
+
     const getTypeClassName = (type) => {
         switch (type.toLowerCase()) {
             case 'technology':
@@ -12,7 +12,7 @@ const PostCardSmall = ({ img, type, title, date }) => {
             case 'gadgets':
                 return 'bg-custom-purple';
             default:
-                return 'bg-gray-500'; 
+                return 'bg-gray-500';
         }
     };
 

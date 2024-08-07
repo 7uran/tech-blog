@@ -12,7 +12,7 @@ module.exports = {
         'custom-purple': '#AB07AB',
         'custom-teal': '#009B9B',
       },
-     
+
       backgroundSize: {
         'zoom': '110%',
 
