@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { IoMenu } from "react-icons/io5";
 import { TfiAngleDown } from "react-icons/tfi";
 import { BiMoon } from "react-icons/bi";
 import { IoSearch } from "react-icons/io5";
 import { useNavigate } from 'react-router-dom';
+import Sidebar from '../../components/Sidebar';
 
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState('Home');
@@ -19,7 +19,7 @@ const Header = () => {
       <div className='flex items-center justify-between container mx-auto max-w-[1260px]'>
         <div className='flex items-center gap-12'>
           <div className='flex items-center gap-2'>
-            <IoMenu className='text-3xl' />
+            <Sidebar/>
             <img src='https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/1techblog-logo.png' alt='logo' />
           </div>
           <div className='flex'>
