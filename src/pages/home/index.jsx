@@ -8,6 +8,8 @@ import EditorsPickCard from '../../components/EditorsPickCard';
 import DoubleLine from '../../components/DoubleLine';
 import TrendingArticleCard from '../../components/TrendingArticleCard';
 import TrendingPostCard from '../../components/TrendingPostCard';
+import { LiaAngleRightSolid } from "react-icons/lia";
+import { TbSquareRotatedFilled } from 'react-icons/tb';
 
 const HomePage = () => {
   return (
@@ -77,20 +79,42 @@ const HomePage = () => {
               </div>
             </div>
             <div className='flex items-center justify-between '>
-
               <TrendingPostCard title={"Leaf Headphones: Here are Some of The Best Devices from This Brand"} date={"Sep  17, 2020"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/billy-freeman-yk-jzxSIk90-unsplash-450x253.jpg"} />
               <TrendingPostCard title={"A Piece of The Wrecked 1986 Challenger Space Shuttle was Found"} date={"Sep  15, 2020"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/nasa-Zzc0vZE2JZI-unsplash-450x350.jpg"} />
               <TrendingPostCard title={"Security Cameras Make Us Feel Safe, but Are They Worth the Invasion?"} date={"Sep  14, 2020"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_314150492_xl-2015-1-768x361.jpg"} />
               <TrendingPostCard title={"This Bedside Table Lamp Will Light Up Your World (Like Nobody Else)"} date={"Sep  13, 2020"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/pragyan-goswami-GziKHv-3lVc-unsplash-450x315.jpg"} />
-
-
-            </div></div>
-
+            </div>
+          </div>
           <div>
-
           </div>
         </div>
+      </section>
 
+      <section>
+        <div className='max-w-[1260px] mx-auto  mt-10 flex flex-col  '>
+          <div className='w-[70%]'>
+            <div className='flex items-center gap-6 '>
+              <h1 className='text-nowrap font-bold font-outfit text-[22px]'>New Gadgets</h1>
+              <DoubleLine color={"border-gray-300"} />
+              <button className='flex items-center text-xs text-gray-400 font-semibold text-nowrap rounded-xl border py-1 px-2'>See all <LiaAngleRightSolid /> </button>
+            </div>
+            <div className='py-6 flex gap-8 items-center'>
+              <div className='relative '>
+                <img className='w-[424px] h-[282px] object-cover rounded-xl' src='https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_286775054_xl-2015-1-768x334.jpg' alt='' />
+                <div className={`absolute bottom-0 z-10  text-xs px-2 py-1 rounded-md font-outfit bg-custom-purple text-white font-semibold `} ><p>GADGETS</p></div>
+              </div>
+              <div className='w-[399px] flex flex-col gap-4'>
+                <h1 className='font-bold text-[22px]'>Oculus Founder Makes a VR Headset That Can Literally Kill You</h1>
+                <div className='flex items-center gap-2'>
+                  <img className='w-5 h-5 rounded-full' src='https://cheerup.theme-sphere.com/wp-content/uploads/2016/05/bella-doe.jpg' alt='' />
+                  <p className='text-gray-600 font-outfit text-xs flex items-center gap-2'>Shane Doe <TbSquareRotatedFilled className='text-[7px]' />Jan 13, 2021</p>
+                </div>
+                <p className='text-[14px] text-gray-500'>To understand the new smart watched and other pro devices of recent focus, we should…</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </section>
 
     </>
