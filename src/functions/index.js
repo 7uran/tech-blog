@@ -4,6 +4,7 @@ export const getCardType = (type) => {
       return 'flex ';
     case 'standart':
       return 'hidden';
+
     default:
       return '';
   }
@@ -29,6 +30,8 @@ export const getTypeForWidth = (type) => {
       return ' w-[793px] h-[453px]';
     case 'standart':
       return 'w-[858px] h-[480px] ';
+    case 'small':
+      return 'w-[386px] h-[290px] ';
     default:
       return '';
   }

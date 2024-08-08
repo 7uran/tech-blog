@@ -10,6 +10,8 @@ import TrendingArticleCard from '../../components/TrendingArticleCard';
 import TrendingPostCard from '../../components/TrendingPostCard';
 import { LiaAngleRightSolid } from "react-icons/lia";
 import { TbSquareRotatedFilled } from 'react-icons/tb';
+import PhoneTechCard from '../../components/PhoneTechCard';
+import NewsCard from '../../components/NewsCard';
 
 const HomePage = () => {
   return (
@@ -18,7 +20,7 @@ const HomePage = () => {
         <div className='flex justify-between w-full gap-10 '>
           <div className='flex flex-col gap-8 '>
             <div>
-              <PostCard cardType={"standart"} img={'https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_29247013_xl-2015-2-768x512.jpg'} type={"gadgets"} titleUp={"Save $25 on Philips Wired Headphone For A"} titleDown={"Great Sounding Over-Ear Headphone"} date={"Jan  12, 2020"} />
+              <PostCard cardType={"standart"} img={'https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_29247013_xl-2015-2-768x512.jpg'} type={"gadgets"} title={"Save $25 on Philips Wired Headphone For A Great Sounding Over-Ear Headphone"} date={"Jan  12, 2020"} />
             </div>
             <div className='flex gap-10'>
               <PostCardSmall img={'https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/daniel-korpai-seLBnDRB6_M-unsplash-1-1-450x563.jpg'} type={"technology"} date={"Jan 11, 2020"} title={"Tablet PC Market to Witness Exponential Growth by 2028, Sources Say"} />
@@ -62,14 +64,14 @@ const HomePage = () => {
       </section>
       <section className='bg-custom-gradient mt-14  '>
         <div className='max-w-[1260px] mx-auto flex flex-col'>
-          <div className='flex items-center gap-6 py-14'>
+          <div className='flex items-center gap-6 py-7 mt-10'>
             <h1 className='text-white font-outfit text-2xl font-semibold text-nowrap '>Trending Videos</h1>
             <DoubleLine color={"border-gray-700"} />
           </div>
           <div className='flex flex-col gap-10'>
             <div className=' flex justify-between  '>
               <div>
-                <PostCard cardType={"video"} type={"gadgets"} titleUp={"Soundcore VR Gaming Earbuds Designed for "} titleDown={"Meta Quest 2 Launched"} date={"Sep  20, 2020"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/sajad-nori-CeyE899Q73Y-unsplash-768x512.jpg"} />
+                <PostCard cardType={"video"} type={"gadgets"} title={"Soundcore VR Gaming Earbuds Designed for Meta Quest 2 Launched "} date={"Sep  20, 2020"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/sajad-nori-CeyE899Q73Y-unsplash-768x512.jpg"} />
               </div>
               <div className='flex flex-col justify-around'>
                 <TrendingArticleCard img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/pexels-leon-3636001-2-300x200.jpg"} title={"Photography: Save $800 on a Fujifilm Camera Before Black Friday"} date={"Sep 12, 2020"} />
@@ -89,34 +91,71 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
-      <section>
-        <div className='max-w-[1260px] mx-auto  mt-10 flex flex-col  '>
-          <div className='w-[70%]'>
-            <div className='flex items-center gap-6 '>
-              <h1 className='text-nowrap font-bold font-outfit text-[22px]'>New Gadgets</h1>
-              <DoubleLine color={"border-gray-300"} />
-              <button className='flex items-center text-xs text-gray-400 font-semibold text-nowrap rounded-xl border py-1 px-2'>See all <LiaAngleRightSolid /> </button>
-            </div>
-            <div className='py-6 flex gap-8 items-center'>
-              <div className='relative '>
-                <img className='w-[424px] h-[282px] object-cover rounded-xl' src='https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_286775054_xl-2015-1-768x334.jpg' alt='' />
-                <div className={`absolute bottom-0 z-10  text-xs px-2 py-1 rounded-md font-outfit bg-custom-purple text-white font-semibold `} ><p>GADGETS</p></div>
-              </div>
-              <div className='w-[399px] flex flex-col gap-4'>
-                <h1 className='font-bold text-[22px]'>Oculus Founder Makes a VR Headset That Can Literally Kill You</h1>
-                <div className='flex items-center gap-2'>
-                  <img className='w-5 h-5 rounded-full' src='https://cheerup.theme-sphere.com/wp-content/uploads/2016/05/bella-doe.jpg' alt='' />
-                  <p className='text-gray-600 font-outfit text-xs flex items-center gap-2'>Shane Doe <TbSquareRotatedFilled className='text-[7px]' />Jan 13, 2021</p>
+      <div className='max-w-[1260px] mx-auto  flex  '>
+        <div>
+          <section>
+            <div className='w-fit mx-auto mt-10   '>
+              <div className='w-[67%]'>
+                <div className='flex items-center gap-6 '>
+                  <h1 className='text-nowrap font-bold font-outfit text-[22px]'>New Gadgets</h1>
+                  <DoubleLine color={"border-gray-300"} />
+                  <button className='flex items-center text-xs text-gray-400 font-semibold text-nowrap rounded-xl border py-1 px-3 hover:text-black transition'>See all <LiaAngleRightSolid /> </button>
                 </div>
-                <p className='text-[14px] text-gray-500'>To understand the new smart watched and other pro devices of recent focus, we should…</p>
+                <div className='py-6 flex gap-6 items-center'>
+                  <div className='relative '>
+                    <img className='hover:opacity-75 transition duration-500 cursor-pointer w-[424px] h-[282px] object-cover rounded-xl' src='https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_286775054_xl-2015-1-768x334.jpg' alt='' />
+                    <div className={`absolute bottom-0 z-10  text-xs px-2 py-1 rounded-md font-outfit bg-custom-purple text-white font-semibold `} ><p>GADGETS</p></div>
+                  </div>
+                  <div className='w-[399px] flex flex-col gap-4'>
+                    <h1 className='font-bold text-[22px] cursor-pointer transition hover:text-custom-blue'>Oculus Founder Makes a VR Headset That Can Literally Kill You</h1>
+                    <div className='flex items-center gap-2'>
+                      <img className='w-5 h-5 rounded-full' src='https://cheerup.theme-sphere.com/wp-content/uploads/2016/05/bella-doe.jpg' alt='' />
+                      <p className='text-gray-600 font-outfit text-xs flex items-center gap-2'>Shane Doe <TbSquareRotatedFilled className='text-[7px]' />Jan 13, 2021</p>
+                    </div>
+                    <p className='text-[14px] text-gray-500'>To understand the new smart watched and other pro devices of recent focus, we should…</p>
+                    <span className='text-custom-blue py-0.5 border-b-gray-100 text-sm border-b-2 w-fit cursor-pointer'>Read More</span>
+                  </div>
+                </div>
+
+                <div className='mt-3 flex flex-row  flex-wrap gap-10'>
+                  <NewsCard img="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_422797426_xl-2015-1-300x199.jpg" title="Braun Series 7 Electric Shaver Review: Quality at a Good Price" />
+                  <NewsCard img="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_443469058_xl-2015-1-300x203.jpg" title="Google Pixel 7, iPhone 14 Compared: Check Out 5 Major Differences" />
+                  <NewsCard img="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/laurens-derks-h0tMHMyfr9A-unsplash-300x199.jpg" title="Why Apple Should Skip The MacBook Pro Launch" />
+                  <NewsCard img="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_430988634_xl-2015-4-300x208.jpg" title="Apollo G2J Showcases Electric Sports Car" />
+                  <NewsCard img="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/youssef-sarhan-tze1kKj7Lgg-unsplash-1-450x287.jpg" title="The Famous Dyson Bladeless Fan is On Sale at Walmart" />
+                  <NewsCard img="https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/light-fun-technology-neon-woman-enjoy-headset-happy-virtual-vr_t20_zWNmJX-1-300x201.jpg" title="Best Luxury Hotels In Bogotá 2022" />
+                </div>
               </div>
             </div>
-          </div>
+          </section>
 
+          <section>
+            <div className='max-w-[1260px] mx-auto  mt-10 flex justify-between  '>
+              <div className='w-[67%] flex flex-col gap-6'>
+                <div className='flex items-center gap-6 '>
+                  <h1 className='text-nowrap font-bold font-outfit text-[22px]'>Phones & Tech</h1>
+                  <DoubleLine color={"border-gray-300"} />
+                  <button className='flex items-center text-xs text-gray-400 font-semibold text-nowrap rounded-xl border py-1 px-3 hover:text-black transition'>See all <LiaAngleRightSolid /> </button>
+                </div>
+                <div className='flex justify-between'>
+                  <PhoneTechCard img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_352742574_xl-2015-1-450x300.jpg"} title={"Google Says Surveillance Vendor Targeted Samsung Phones"} />
+                  <PhoneTechCard img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/sahej-brar-6Pg2e3W1KDY-unsplash-450x450.jpg"} title={"Why Are iPhones More Expensive Than Android Phones?"} />
+                </div>
+                <div className='flex flex-wrap gap-10'>
+                  <NewsCard title={"The Pros of Buying a Used/Refurbished iPhone 11"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/omid-armin-fxJIHyWTRu4-unsplash-300x201.jpg"} />
+                  <NewsCard title={"OnePlus Will Focus on a Premium Build Over Camera Performance"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/vinit-vispute-enqYaZPSDjQ-unsplash-300x200.jpg"} />
+                  <NewsCard title={"These OnePlus Phones Are Getting Stable Android 13 Update"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/omid-armin-2ZgdviaHOkc-unsplash-2-267x300.jpg"} />
+                  <NewsCard title={"The Best Wireless Earbuds for the Samsung Galaxy S22 in 2022"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/ivan-shilov-D24B2DiV0sY-unsplash-300x200.jpg"} />
+                  <NewsCard title={"Huawei Phones are Moving Forward Without Google Mobile Services"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/omid-armin-mP4sfCCoTrI-unsplash-1-181x300.jpg"} />
+                  <NewsCard title={"Redmi Series Launched With 200MP Camera and a Fast Charging"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/mark-chan-489jbTi51sg-unsplash-300x169.jpg"} />
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-      </section>
 
+
+      </div>
     </>
   );
 };
