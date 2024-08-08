@@ -26,7 +26,7 @@ const EditorsPickCard = ({ type, img, title, number }) => {
                         <p className='font-inter  text-gray-300 font-semibold text-4xl'>{number}</p></div>
                     <div className='px-4 flex flex-col gap-2 w-full '>
                         <p className='font-bold text-md font-inter'>{title}</p>
-                        <p className='text-black text-xs font-semibold flex items-center gap-2'>Shane Doe <span className='flex items-center font-normal text-gray-400 gap-2'><TbSquareRotatedFilled className='text-[7px]' />Mar 15, 2020</span></p>
+                        <p className='text-black text-xs font-outfit font-semibold flex items-center gap-2'>Shane Doe <span className='flex items-center font-normal text-gray-400 gap-2'><TbSquareRotatedFilled className='text-[7px]' />Mar 15, 2020</span></p>
                     </div>
                 </div>
             </div>

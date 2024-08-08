@@ -1,20 +1,10 @@
 import React from 'react';
 import { TbSquareRotatedFilled } from 'react-icons/tb';
+import { getTypeClassName } from '../../functions';
 
 const PostCardSmall = ({ img, type, title, date }) => {
 
-    const getTypeClassName = (type) => {
-        switch (type.toLowerCase()) {
-            case 'technology':
-                return 'bg-custom-blue';
-            case 'phones':
-                return 'bg-custom-teal';
-            case 'gadgets':
-                return 'bg-custom-purple';
-            default:
-                return 'bg-gray-500';
-        }
-    };
+
 
     return (
         <div className='shadow-lg w-[411px] h-[363px] rounded-xl overflow-hidden cursor-pointer'>
@@ -28,7 +18,7 @@ const PostCardSmall = ({ img, type, title, date }) => {
                     {type.toUpperCase()}
                 </div>
             </div>
-            <div className='p-7 font-semibold text-lg flex flex-col gap-3'>
+            <div className='p-7 font-semibold font-outfit text-lg flex flex-col gap-3'>
                 <h1 className='hover:text-custom-blue transition'>{title}</h1>
                 <p className='text-gray-500 text-xs flex items-center gap-2'>
                     Shane Doe <TbSquareRotatedFilled className='text-[7px]' /> {date}

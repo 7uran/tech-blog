@@ -1,23 +1,13 @@
 import React from 'react'
 import { GoClock } from "react-icons/go";
+import { getTypeClassName } from '../../functions';
 
 const ArticleCard = ({ type, title, img, }) => {
-  const getTypeClassName = (type) => {
-    switch (type.toLowerCase()) {
-      case 'technology':
-        return 'text-custom-blue';
-      case 'phones':
-        return 'text-custom-teal';
-      case 'gadgets':
-        return 'text-custom-purple';
-      default:
-        return 'text-gray-500';
-    }
-  };
+
   return (
     <div className='py-5 flex items-center  border-b cursor-pointer  '>
       <div className='flex flex-col gap-3'>
-        <div>
+        <div clas>
           <h4 className={`text-xs font-outfit text-custom-blue font-semibold ${getTypeClassName(type)}`}>{type.toUpperCase()}</h4>
         </div>
         <div className=' max-w-[90%]'><p className='font-bold max-w-[90%] hover:text-custom-blue transition'>{title}</p></div>

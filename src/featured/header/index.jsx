@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { TfiAngleDown } from "react-icons/tfi";
 import { BiMoon } from "react-icons/bi";
 import { IoSearch } from "react-icons/io5";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Sidebar from '../../components/Sidebar';
 
 const Header = () => {
@@ -36,12 +36,12 @@ const Header = () => {
               >
                 Features <TfiAngleDown className='text-[10px] text-custom-blue ' />
               </li>
-              <li
-                className={`cursor-pointer transition hover:border-b-custom-blue border-b-2 border-b-transparent flex items-center py-5 gap-2 ${activeMenu === 'Technology' ? 'border-b-custom-blue' : ''}`}
-                onClick={() => handleMenuClick('Technology', '')}
-              >
-                Technology <TfiAngleDown className='text-[10px] text-custom-blue ' />
-              </li>
+              <div className="relative group">
+                <Link className="text-black  pb-[31%] group-hover:border-b-2  cursor-pointer">Technology </Link>
+                <div className="z-50 absolute transform-translate-y-[50%] transform -translate-x-[50%] top-full mt-[29%] p-4 w-[1100px] flex space-x-4 bg-white shadow-lg  ml-[135%] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, eveniet voluptates? Doloribus omnis ratione iure tempora reiciendis voluptas eveniet non facilis dicta. Laborum pariatur perspiciatis dolore explicabo neque quam provident, culpa impedit accusantium ipsa blanditiis sed, adipisci soluta maxime dignissimos veritatis accusamus autem aliquam ab? Eligendi harum beatae explicabo et?
+                </div>
+              </div>
               <li
                 className={`cursor-pointer transition hover:border-b-custom-blue border-b-2 border-b-transparent flex items-center py-5 ${activeMenu === 'Gadgets' ? 'border-b-custom-blue' : ''}`}
                 onClick={() => handleMenuClick('Gadgets', '/gadgets')}
@@ -53,6 +53,12 @@ const Header = () => {
                 onClick={() => handleMenuClick('Phones', '')}
               >
                 Phones <TfiAngleDown className='text-[10px] text-custom-blue ' />
+              </li>
+              <li
+                className={`cursor-pointer transition hover:border-b-custom-blue border-b-2 border-b-transparent flex items-center py-5 gap-2 ${activeMenu === 'Phones' ? 'border-b-custom-blue' : ''}`}
+                onClick={() => handleMenuClick('Phones', '')}
+              >
+                Buy Theme
               </li>
             </ul>
           </div>

@@ -12,11 +12,12 @@ module.exports = {
         'custom-purple': '#AB07AB',
         'custom-teal': '#009B9B',
       },
-
       backgroundSize: {
         'zoom': '110%',
-
-      }
+      },
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(170deg, #191A3E 0%, #020203 100%)',
+      },
     },
   },
   plugins: [],

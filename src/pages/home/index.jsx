@@ -6,15 +6,17 @@ import PostCardSmall from '../../components/PostCardSmall';
 import Ads from '../../components/Ads';
 import EditorsPickCard from '../../components/EditorsPickCard';
 import DoubleLine from '../../components/DoubleLine';
+import TrendingArticleCard from '../../components/TrendingArticleCard';
+import TrendingPostCard from '../../components/TrendingPostCard';
 
 const HomePage = () => {
   return (
     <>
-      <section className='py-10'>
+      <section className='py-10 max-w-[1260px] mx-auto'>
         <div className='flex justify-between w-full gap-10 '>
           <div className='flex flex-col gap-8 '>
             <div>
-              <PostCard img={'https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_29247013_xl-2015-2-768x512.jpg'} type={"gadgets"} titleUp={"Save $25 on Philips Wired Headphone For A"} titleDown={"Great Sounding Over-Ear Headphone"} date={"Jan  12, 2020"} />
+              <PostCard cardType={"standart"} img={'https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_29247013_xl-2015-2-768x512.jpg'} type={"gadgets"} titleUp={"Save $25 on Philips Wired Headphone For A"} titleDown={"Great Sounding Over-Ear Headphone"} date={"Jan  12, 2020"} />
             </div>
             <div className='flex gap-10'>
               <PostCardSmall img={'https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/daniel-korpai-seLBnDRB6_M-unsplash-1-1-450x563.jpg'} type={"technology"} date={"Jan 11, 2020"} title={"Tablet PC Market to Witness Exponential Growth by 2028, Sources Say"} />
@@ -35,11 +37,11 @@ const HomePage = () => {
 
       </section>
 
-      <section>
+      <section className='max-w-[1260px] mx-auto'>
         <Ads />
 
       </section>
-      <section>
+      <section className='max-w-[1260px] mx-auto'>
         <div className='flex flex-col mt-5'>
           <div className=' flex items-center gap-8 py-8 '>
             <DoubleLine />
@@ -55,9 +57,39 @@ const HomePage = () => {
 
           </div>
         </div>
+      </section>
+      <section className='bg-custom-gradient mt-14  '>
+        <div className='max-w-[1260px] mx-auto flex flex-col'>
+          <div className='flex items-center gap-6 py-14'>
+            <h1 className='text-white font-outfit text-2xl font-semibold text-nowrap '>Trending Videos</h1>
+            <DoubleLine color={"border-gray-700"} />
+          </div>
+          <div className='flex flex-col gap-10'>
+            <div className=' flex justify-between  '>
+              <div>
+                <PostCard cardType={"video"} type={"gadgets"} titleUp={"Soundcore VR Gaming Earbuds Designed for "} titleDown={"Meta Quest 2 Launched"} date={"Sep  20, 2020"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/sajad-nori-CeyE899Q73Y-unsplash-768x512.jpg"} />
+              </div>
+              <div className='flex flex-col justify-around'>
+                <TrendingArticleCard img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/pexels-leon-3636001-2-300x200.jpg"} title={"Photography: Save $800 on a Fujifilm Camera Before Black Friday"} date={"Sep 12, 2020"} />
+                <TrendingArticleCard title={"Wireless Earbuds May Help Amplify Sound for People with Hearing Loss"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/jerin-john-Smbz6GQt_CI-unsplash-2-300x176.jpg"} date={"Sep 11, 2020"} />
+                <TrendingArticleCard title={"Google Play Store Will Ask You to Update Apps if they Crash"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/freestocks-hRVrvH9-dG0-unsplash-1-300x200.jpg"} date={"Sep 10, 2020"} />
+                <TrendingArticleCard title={"Does The Budget-Friendly PICO 4 VR Headset Live Up To The Hype?"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/light-fun-technology-neon-woman-enjoy-headset-happy-virtual-vr_t20_zWNmJX-1-300x201.jpg"} date={"Sep 9, 2020"} />
+              </div>
+            </div>
+            <div className='flex items-center justify-between '>
+
+              <TrendingPostCard title={"Leaf Headphones: Here are Some of The Best Devices from This Brand"} date={"Sep  17, 2020"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/billy-freeman-yk-jzxSIk90-unsplash-450x253.jpg"} />
+              <TrendingPostCard title={"A Piece of The Wrecked 1986 Challenger Space Shuttle was Found"} date={"Sep  15, 2020"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/nasa-Zzc0vZE2JZI-unsplash-450x350.jpg"} />
+              <TrendingPostCard title={"Security Cameras Make Us Feel Safe, but Are They Worth the Invasion?"} date={"Sep  14, 2020"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_314150492_xl-2015-1-768x361.jpg"} />
+              <TrendingPostCard title={"This Bedside Table Lamp Will Light Up Your World (Like Nobody Else)"} date={"Sep  13, 2020"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/pragyan-goswami-GziKHv-3lVc-unsplash-450x315.jpg"} />
 
 
+            </div></div>
 
+          <div>
+
+          </div>
+        </div>
 
       </section>
 

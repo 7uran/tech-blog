@@ -1,8 +1,8 @@
 import React from 'react'
 
-const DoubleLine = () => {
+const DoubleLine = ({ color }) => {
     return (
-        <div className='border-y h-1 w-full'></div>
+        <div className={`${color} border-y h-1 w-full`}></div>
     )
 }
 

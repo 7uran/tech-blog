@@ -10,7 +10,7 @@ const Layout = () => {
             <div className='flex-1 flex flex-col transition-all duration-300 '>
                 <Header />
                 <main className='flex-1 overflow-y-auto'>
-                    <div className='container mx-auto max-w-[1260px] font-inter'>
+                    <div className=' mx-auto font-inter'>
                         <Outlet />
                     </div>
                 </main>
