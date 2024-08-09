@@ -24,6 +24,20 @@ export const getTypeClassName = (type) => {
   }
 };
 
+
+export const getTypeBg= (type) => {
+  switch (type.toLowerCase()) {
+    case 'technology':
+      return 'bg-custom-blue';
+    case 'phones':
+      return 'bg-custom-teal';
+    case 'gadgets':
+      return 'bg-custom-purple';
+    default:
+      return 'text-gray-500';
+  }
+};
+
 export const getTypeForWidth = (type) => {
   switch (type.toLowerCase()) {
     case 'video':

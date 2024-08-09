@@ -12,6 +12,9 @@ import { LiaAngleRightSolid } from "react-icons/lia";
 import { TbSquareRotatedFilled } from 'react-icons/tb';
 import PhoneTechCard from '../../components/PhoneTechCard';
 import NewsCard from '../../components/NewsCard';
+import { FaRegEnvelope } from "react-icons/fa6";
+import PopularNowCard from '../../components/PopularNowCard';
+import FeaturedCard from '../../components/FeaturedCard';
 
 const HomePage = () => {
   return (
@@ -30,7 +33,7 @@ const HomePage = () => {
           </div>
           <div className=' w-full'>
 
-            <h2 className='font-extrabold text-lg py-2 border-b'>People's Favorite</h2>
+            <h2 className='font-extrabold  text-lg py-2 border-b'>People's Favorite</h2>
             <ArticleCard type={"technology"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/youssef-sarhan-tze1kKj7Lgg-unsplash-1-450x287.jpg"} title={"Schools, Parents Disagree over Bans on Student Mobile Phones "} />
             <ArticleCard type={"gadgets"} title={"PC Game Deals: Stealth Classic to Grab, Fresh VR Bundle & More"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/pexels-sound-on-3761262-1-450x267.jpg"} />
             <ArticleCard type={"technology"} title={"Electric Car Owners to Pay Road Tax from 2025, Hunt Announces"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_273724454_xl-2015-300x200.jpg"} />
@@ -95,7 +98,7 @@ const HomePage = () => {
         <div>
           <section>
             <div className='w-fit mx-auto mt-10   '>
-              <div className='w-[67%]'>
+              <div className='w-[97%]'>
                 <div className='flex items-center gap-6 '>
                   <h1 className='text-nowrap font-bold font-outfit text-[22px]'>New Gadgets</h1>
                   <DoubleLine color={"border-gray-300"} />
@@ -131,7 +134,7 @@ const HomePage = () => {
 
           <section>
             <div className='max-w-[1260px] mx-auto  mt-10 flex justify-between  '>
-              <div className='w-[67%] flex flex-col gap-6'>
+              <div className='w-[97%] flex flex-col gap-6'>
                 <div className='flex items-center gap-6 '>
                   <h1 className='text-nowrap font-bold font-outfit text-[22px]'>Phones & Tech</h1>
                   <DoubleLine color={"border-gray-300"} />
@@ -153,9 +156,81 @@ const HomePage = () => {
             </div>
           </section>
         </div>
+        <div className='flex flex-col gap-8 sticky top-10 h-fit mt-20'>
+          <div className='border rounded-lg flex flex-col items-center h-[388px] w-[322px] shadow-md'>
+            <div className='flex justify-center  w-full translate-y-[-30px]'>
+              <div className='bg-custom-blue w-fit rounded-full flex items-center  p-4'>
+                <FaRegEnvelope className='text-3xl text-white' />
+              </div>
+            </div>
+            <div className=' flex items-center flex-col  gap-4'>
+              <h2 className='font-bold font-outfit text-[24px]'>Subscribe to Updates</h2>
+              <p className='text-[14px] text-center px-10'>Get the latest creative news from FooBar about art, design and business.</p>
+              <div className='flex flex-col items-center gap-4'>
+                <input type="text" className='text-center w-[255px] focus:border-gray-200 h-[42px] border rounded-sm text-sm' placeholder='Your email adress..'></input>
+                <button className='bg-custom-blue w-full py-3 font-outfit text-white text-xs font-bold'>
+                  SUBSCRIBE
+                </button>
+              </div>
+              <div className='px-8'>
+                <input type="checkbox"></input>
+                <span className='text-[13px] text-gray-400'> By signing up, you agree to the our terms and our Privacy Policy agreement.</span>
+              </div>
 
+            </div>
+          </div>
+
+          <div className='flex flex-col gap-6'>
+            <h2 className='font-extrabold  text-lg py-2 border-b'>Popular Now</h2>
+            <PopularNowCard num={"1"} title={"Popular New Xbox Game Pass Game Being Review Bombed With “0s”"} view={"7,792"} />
+            <PopularNowCard num={"2"} title={"Samsung is Developing Bright MicroLED on Displays for AR Headsets"} view={"6,914"} />
+            <PopularNowCard num={"3"} title={"Warner Bros. Games Announces Mortal Kombat: Onslaught"} view={"4,418"} />
+            <PopularNowCard num={"4"} title={"Super League Gaming now Publisher of Roblox Anime Battlegrounds"} view={"1,013"} />
+            <PopularNowCard num={"5"} title={"Hologate Announces New Plans for First Large Format World VR Arcade"} view={"798"} />
+
+          </div>
+
+
+        </div>
 
       </div>
+
+      <section className='py-12'>
+        <Ads />
+      </section>
+
+      <section className='max-w-[1260px] mx-auto  '>
+
+        <div className=' flex items-center gap-8 py-8 '>
+          <DoubleLine />
+          <div className='font-extrabold text-[30px] font-outfit w-fit text-nowrap'>Featured Reviews</div>
+          <DoubleLine />
+        </div>
+
+        <div className='h-[423px] flex justify-between bg-custom-gradient rounded-lg'>
+          <div className='px-10 my-auto flex flex-col gap-4  w-[47%]'>
+            <div className='bg-custom-pink w-fit text-white text-xs font-semibold py-1 px-3 font-outfit rounded-md'>GAMING</div>
+            <h2 className='text-white text-[27px] font-bold cursor-pointer hover:text-custom-blue transition'>Pico 4 Review: Should You Actually Buy One Instead Of Quest 2?</h2>
+            <div className='flex items-center gap-2'>
+              <img className='w-5 h-5 rounded-full' src='https://cheerup.theme-sphere.com/wp-content/uploads/2016/05/bella-doe.jpg' alt='' />
+              <p className='text-gray-200 font-outfit text-xs flex items-center gap-2'>Shane Doe <TbSquareRotatedFilled className='text-[7px]' />Jan 15,2021</p>
+            </div>
+            <p className='text-[14px] text-gray-300  '>To understand the new smart watched and other pro devices of recent focus, we should look to…</p>
+          </div>
+          <div className='relative cursor-pointer '>
+            <img className='rounded-lg h-full  object-cover' src='https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/woman-in-3d-virtual-reality-glasses_t20_WQVvL4-768x513.jpg' alt='' />
+            <div className='absolute text-white top-2 right-2 border-[3px] text-xs font-semibold flex items-center justify-center border-custom-blue rounded-full w-[45px] h-[45px]'>85%</div>
+          </div>
+        </div>
+
+        <div className='mt-10 flex justify-between'>
+          <FeaturedCard type={"technology"} rating={"8.1"} title={"A Review of the Venus Optics Argus 18mm f/0.95 MFT APO Lens"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/pexels-leon-3636001-2-450x300.jpg"} />
+          <FeaturedCard type={"gadgets"} rating={"8.9"} title={"DJI Avata Review: Immersive FPV Flying For Drone Enthusiasts"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/surya-devarakonda-lnEM5jOu-mc-unsplash-450x300.jpg"} />
+          <FeaturedCard type={"gadgets"} rating={"8.9"} title={"Bose QuietComfort Earbuds II: Noise-Cancellation Kings Reviewed"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/omid-armin-gSZCLsE7ysc-unsplash-450x300.jpg"} />
+          <FeaturedCard type={"technology"} rating={"81%"} title={"AMD Ryzen 9 7900X Review: Zen 4 Has a Pricing Problem"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/42996726655_0df7830ab6_b-1-450x253.jpg"} />
+        </div>
+
+      </section>
     </>
   );
 };

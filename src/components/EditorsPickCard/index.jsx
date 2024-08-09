@@ -1,19 +1,9 @@
 import React from 'react'
 import { TbSquareRotatedFilled } from 'react-icons/tb'
+import { getTypeClassName } from '../../functions'
 
 const EditorsPickCard = ({ type, img, title, number }) => {
-    const getTypeClassName = (type) => {
-        switch (type.toLowerCase()) {
-            case 'technology':
-                return 'bg-custom-blue';
-            case 'phones':
-                return 'bg-custom-teal';
-            case 'gadgets':
-                return 'bg-custom-purple';
-            default:
-                return 'bg-gray-500';
-        }
-    };
+
     return (
         <>
             <div className='w-[286px] h-[311px] flex flex-col gap-4 cursor-pointer '>

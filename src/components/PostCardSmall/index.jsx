@@ -1,6 +1,6 @@
 import React from 'react';
 import { TbSquareRotatedFilled } from 'react-icons/tb';
-import { getTypeClassName } from '../../functions';
+import { getTypeBg } from '../../functions';
 
 const PostCardSmall = ({ img, type, title, date }) => {
 
@@ -14,7 +14,7 @@ const PostCardSmall = ({ img, type, title, date }) => {
                     src={img}
                     alt={title}
                 />
-                <div className={`absolute bottom-[-1px] left-8 text-white text-xs font-semibold py-1 px-3 font-outfit rounded-md ${getTypeClassName(type)}`}>
+                <div className={`absolute bottom-[-1px] left-8 text-white text-xs font-semibold py-1 px-3 font-outfit rounded-md ${getTypeBg(type)}`}>
                     {type.toUpperCase()}
                 </div>
             </div>

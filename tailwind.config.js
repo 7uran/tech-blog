@@ -11,6 +11,7 @@ module.exports = {
         'custom-blue': '#3C3FDE',
         'custom-purple': '#AB07AB',
         'custom-teal': '#009B9B',
+        'custom-pink': '#E91B65',
       },
       backgroundSize: {
         'zoom': '110%',
