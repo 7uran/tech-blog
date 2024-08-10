@@ -4,6 +4,7 @@ import { BiMoon } from "react-icons/bi";
 import { IoSearch } from "react-icons/io5";
 import { Link, useNavigate } from 'react-router-dom';
 import Sidebar from '../../components/Sidebar';
+import TechnologyCard from '../../components/TechnologyCard';
 
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState('Home');
@@ -37,9 +38,16 @@ const Header = () => {
                 Features <TfiAngleDown className='text-[10px] text-custom-blue ' />
               </li>
               <div className="relative group">
-                <Link className="text-black  pb-[31%] group-hover:border-b-2  cursor-pointer">Technology </Link>
-                <div className="z-50 absolute transform-translate-y-[50%] transform -translate-x-[50%] top-full mt-[29%] p-4 w-[1100px] flex space-x-4 bg-white shadow-lg  ml-[135%] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, eveniet voluptates? Doloribus omnis ratione iure tempora reiciendis voluptas eveniet non facilis dicta. Laborum pariatur perspiciatis dolore explicabo neque quam provident, culpa impedit accusantium ipsa blanditiis sed, adipisci soluta maxime dignissimos veritatis accusamus autem aliquam ab? Eligendi harum beatae explicabo et?
+                <Link className="text-black   cursor-pointer">
+                  <p className='flex items-center  py-[25%] group-hover:border-b-2 border-b-custom-blue '>Technology <TfiAngleDown className='text-[10px] text-custom-blue ' />
+                  </p>
+                </Link>
+                <div className="z-50 absolute transform-translate-y-[50%] transform -translate-x-[47%] top-full p-4 w-[1260px] flex justify-between bg-white shadow-lg  ml-[135%] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
+                  <TechnologyCard img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_242235046_xl-2015-1-450x256.jpg"} title={"Is the Hyperloop Doomed? What Elon Musk’s Latest Setback Really Means"} />
+                  <TechnologyCard img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/remy_loz-3vVzdb8KKIw-unsplash-450x300.jpg"} title={"The Best Early Black Friday Deals on Gaming Laptops and Accessories"} />
+                  <TechnologyCard img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/pexels-bogdan-glisik-1661469-1-450x390.jpg"} title={"Apple Watch’s ECG Can Help Diagnose Heart Problem: Research"} />
+                  <TechnologyCard img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/pexels-luis-quintero-1787236-450x300.jpg"} title={"Simple Tips and Tricks to Take Care of Your Expensive DSLR Camera"} />
+                  <TechnologyCard img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/shubham-s-web3-aCqAjF3TRf4-unsplash-450x253.jpg"} title={"Tech Study Reveals Effects of Mobile Technology on Professionals"} />
                 </div>
               </div>
               <li

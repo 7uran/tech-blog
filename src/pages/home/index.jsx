@@ -12,11 +12,15 @@ import { LiaAngleRightSolid } from "react-icons/lia";
 import { TbSquareRotatedFilled } from 'react-icons/tb';
 import PhoneTechCard from '../../components/PhoneTechCard';
 import NewsCard from '../../components/NewsCard';
-import { FaRegEnvelope } from "react-icons/fa6";
+import { FaRegEnvelope, FaXTwitter } from "react-icons/fa6";
 import PopularNowCard from '../../components/PopularNowCard';
 import FeaturedCard from '../../components/FeaturedCard';
+import LatestArticleCard from '../../components/LatestArticleCard';
+import { FaFacebookF, FaInstagram, FaPinterestP, FaTelegramPlane, FaWhatsapp } from 'react-icons/fa';
+import GamingZoneCard from '../../components/GamingZoneCard';
 
 const HomePage = () => {
+
   return (
     <>
       <section className='py-10 max-w-[1260px] mx-auto'>
@@ -140,7 +144,7 @@ const HomePage = () => {
                   <DoubleLine color={"border-gray-300"} />
                   <button className='flex items-center text-xs text-gray-400 font-semibold text-nowrap rounded-xl border py-1 px-3 hover:text-black transition'>See all <LiaAngleRightSolid /> </button>
                 </div>
-                <div className='flex justify-between'>
+                <div className='flex justify-between w-[93%]'>
                   <PhoneTechCard img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_352742574_xl-2015-1-450x300.jpg"} title={"Google Says Surveillance Vendor Targeted Samsung Phones"} />
                   <PhoneTechCard img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/sahej-brar-6Pg2e3W1KDY-unsplash-450x450.jpg"} title={"Why Are iPhones More Expensive Than Android Phones?"} />
                 </div>
@@ -231,6 +235,98 @@ const HomePage = () => {
         </div>
 
       </section>
+      <section className=''>
+        <div className='max-w-[1260px]  mx-auto flex justify-between'>
+          <div className='w-[67%]'>
+            <div className='flex items-center gap-6 mt-14'>
+              <h1 className='text-nowrap font-bold font-outfit text-[22px]'>Latest Articles</h1>
+              <DoubleLine color={"border-gray-300"} />
+            </div>
+            <LatestArticleCard title={"Game Development This Week: Save On Essential Tools and More"} type={"gaming"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/thisisengineering-raeng-a7A9O5htrKs-unsplash-450x300.jpg"} />
+            <LatestArticleCard title={"Is the Hyperloop Doomed? What Elon Musk’s Latest Setback Really Means"} type={"technology"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_242235046_xl-2015-1-450x256.jpg"} />
+            <LatestArticleCard title={"The Best Early Black Friday Deals on Gaming Laptops and Accessories"} type={"technology"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/remy_loz-3vVzdb8KKIw-unsplash-450x300.jpg"} />
+            <PostCard className="h-[434px]" cardType={"standart"} img={'https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/matias-islas-Nw0j-2YAnfI-unsplash-1-1024x683.jpg'} type={"gaming"} title={"Riot Games Acquires a Wargaming Studio to Help With Live Game Development"} date={"Mar  10, 2022"} />
+            <LatestArticleCard title={"Keep Talking and Nobody Explodes: A Boomer Gaming in VR"} type={"gaming"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/remy-gieling-bA5ZJ9JVrb8-unsplash-1-450x286.jpg"} />
+            <LatestArticleCard title={"Apple Watch’s ECG Can Help Diagnose Heart Problem: Research"} type={"technology"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/pexels-bogdan-glisik-1661469-1-450x390.jpg"} />
+            <LatestArticleCard title={"To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and the quantified…"} type={"technology"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/pexels-luis-quintero-1787236-450x300.jpg"} />
+            <LatestArticleCard title={"To understand the new smart watched and other pro devices of recent focus, we should look to Silicon Valley and the quantified…"} type={"gaming"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/pexels-bruno-bueno-3854821-450x300.jpg"} />
+
+          </div>
+
+          <div className='flex flex-col gap-10 h-fit  mt-16 sticky top-10'>
+            <div className='w-[334px] h-[317px] border shadow-lg rounded-lg'>
+              <div className='flex justify-center py-6 '>
+                <h2 className='text-[19px]  font-semibold font-outfit'>We're Social</h2>
+              </div>
+              <div className='p-6 flex-wrap flex justify-around gap-2'>
+                <div className='border cursor-pointer flex items-center px-3 py-2 hover:text-[#1A6DD4] transition gap-3  w-[131px] text-start  '  >
+                  <FaFacebookF className='text-[#1A6DD4]' />
+                  <div>
+                    <p className='text-[13px] font-semibold'>1.1K</p>
+                    <p className='text-[12px]'>Facebook</p>
+                  </div>
+                </div>
+                <div className='border flex  items-center px-3 py-2 gap-3 cursor-pointer hover:text-[#58ADEF] transition  w-[131px] text-start  '  >
+                  <FaXTwitter className='text-[#58ADEF]' />
+                  <div>
+                    <p className='text-[13px] font-semibold'>68.9K</p>
+                    <p className='text-[12px]'>Twitter</p>
+                  </div>
+                </div>
+                <div className='border flex items-center px-3 py-2 gap-3 cursor-pointer hover:text-[#E4223E] transition  w-[131px] text-start  '  >
+                  <FaPinterestP className='text-[#E4223E]' />
+                  <div>
+                    <p className='text-[13px] font-semibold'>10.7K</p>
+                    <p className='text-[12px]'>Pinterest</p>
+                  </div>
+                </div>
+                <div className='border flex items-center px-3 py-2 gap-3 cursor-pointer hover:text-[#C13584] transition  w-[131px] text-start  '  >
+                  <FaInstagram className='text-[#C13584]' />
+                  <div>
+                    <p className='text-[13px] font-semibold'>46.4K</p>
+                    <p className='text-[12px]'>Instagram</p>
+                  </div>
+                </div>
+                <div className='border flex items-center px-3 py-2 gap-3 cursor-pointer hover:text-[#0088CC] transition  w-[131px] text-start  '  >
+                  <FaTelegramPlane className='text-[#0088CC]' />
+                  <div>
+                    <p className='text-[13px] font-semibold'>Telegram</p>
+
+                  </div>
+                </div>
+                <div className='border flex items-center px-3 py-2 gap-3 cursor-pointer hover:text-[#26C863] transition  w-[131px] text-start  '  >
+                  <FaWhatsapp className='text-[#26C863]' />
+                  <div>
+                    <p className='text-[13px] font-semibold'>Whatsapp</p>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className='flex flex-col gap-6'>
+              <h2 className='font-extrabold  text-lg py-2 border-b'>Gaming Zone</h2>
+
+              <div className='w-[336px] flex flex-col gap-4'>
+                <div className='w-[336px] h-[189px] border rounded-xl shadow-lg relative'>
+                  <img className='w-[336px] h-[189px] rounded-xl object-cover' src='https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_422755408_xl-2015-1-450x225.jpg' alt='' />
+                  <div className='absolute top-0 w-fit text-white text-xs font-semibold py-1 px-3 font-outfit bg-custom-pink rounded-md'>GAMING</div>
+                </div>
+                <div className='flex flex-col gap-2'>
+                  <h1 className='font-bold text-[19px]'>PS5 vs Xbox Series XS vs Switch Launch Sales Comparison</h1>
+                  <p className='text-gray-600 font-outfit text-xs flex items-center gap-2'>Shane Doe <TbSquareRotatedFilled className='text-[7px]' />Nov 19,2021</p>
+                </div>
+                <GamingZoneCard title={"New Oculus VR Kills IRL If Your Game Character Dies"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/man-with-glasses-of-virtual-reality-nominated_t20_ZYvEBR-300x210.jpg"} />
+                <GamingZoneCard title={"Hologate VR Serves Its Five Millionth Customer"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/pexels-bruno-bueno-3854821-450x300.jpg"} />
+                <GamingZoneCard title={"The Nintendo Switch Can’t Seem To Handle Pokémon"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/yasin-hasan-PU1uYnZrAL0-unsplash-300x200.jpg"} />
+                <GamingZoneCard title={"The Fujifilm X-T30 is The Perfect Camera for Gaming"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/puria-berenji-tUnzh_uINw0-unsplash-225x300.jpg"} />
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
     </>
   );
 };

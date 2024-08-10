@@ -25,7 +25,7 @@ export const getTypeClassName = (type) => {
 };
 
 
-export const getTypeBg= (type) => {
+export const getTypeBg = (type) => {
   switch (type.toLowerCase()) {
     case 'technology':
       return 'bg-custom-blue';
@@ -33,6 +33,8 @@ export const getTypeBg= (type) => {
       return 'bg-custom-teal';
     case 'gadgets':
       return 'bg-custom-purple';
+    case 'gaming':
+      return 'bg-custom-pink';
     default:
       return 'text-gray-500';
   }
