@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { IoMenu } from 'react-icons/io5';
-import { Link } from 'react-router-dom';
+
 
 const Sidebar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -47,7 +47,7 @@ const Sidebar = () => {
 
                 </button>
                 <div className="py-4 overflow-y-auto flex items-center gap-12  flex-col">
-                    <img className='w-[207px]' src='https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/techblog-logo-dark@2x.png' />
+                    <img alt='' className='w-[207px]' src='https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/techblog-logo-dark@2x.png' />
                     <div className=' flex items-center justify-center flex-col  gap-4 bg-black  w-[297px] h-[425px] border rounded-xl'>
                         <h2 className='font-bold font-outfit text-[24px] text-white'>Subscribe to Updates</h2>
                         <p className='text-[14px] text-center px-10 text-white'>Get the latest creative news from FooBar about art, design and business.</p>

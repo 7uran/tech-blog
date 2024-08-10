@@ -1,15 +1,17 @@
 import React from 'react'
 import { TbSquareRotatedFilled } from 'react-icons/tb'
-import { getTypeBg, getTypeClassName } from '../../functions'
+import { getTypeBg } from '../../functions'
 
-const EditorsPickCard = ({ type, img, title, number }) => {
+
+const EditorsPickCard = ({ type, img, title, number}) => {
 
     return (
         <>
-            <div className='w-[286px] h-[311px] flex flex-col gap-4 cursor-pointer '>
+            <div className='w-[286px] h-[311px] group flex flex-col gap-4 cursor-pointer '>
                 <div className='relative'>
                     <img className='hover:opacity-75 duration-500 transition rounded-xl shadow-lg object-cover w-[286px] h-[190px]' src={img} alt='' />
                     <div className={`absolute top-0 z-10  text-xs px-2 py-1 rounded-md font-outfit text-white font-semibold ${getTypeBg(type)}`} ><p>{type.toUpperCase()}</p></div>
+                   
                 </div>
                 <div className='flex items-start '>
                     <div>

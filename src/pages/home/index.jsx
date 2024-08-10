@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ArticleCard from '../../components/ArticleCard';
 import PostCard from '../../components/PostCard';
 import PostCardSmall from '../../components/PostCardSmall';
@@ -18,9 +18,22 @@ import FeaturedCard from '../../components/FeaturedCard';
 import LatestArticleCard from '../../components/LatestArticleCard';
 import { FaFacebookF, FaInstagram, FaPinterestP, FaTelegramPlane, FaWhatsapp } from 'react-icons/fa';
 import GamingZoneCard from '../../components/GamingZoneCard';
+import fetchPosts from '../../services/api';
+import urlFor from '../../services/image';
+
+
 
 const HomePage = () => {
+  const [editorCardsData, setEditorCardsData] = useState([]);
 
+  useEffect(() => {
+    const getPosts = async () => {
+      const result = await fetchPosts();
+      setEditorCardsData(result);
+    };
+
+    getPosts();
+  }, []);
   return (
     <>
       <section className='py-10 max-w-[1260px] mx-auto'>
@@ -61,11 +74,19 @@ const HomePage = () => {
           </div>
 
           <div className='flex justify-between'>
-            <EditorsPickCard number={"1"} title={"Study: Earbuds Use, Youngsters at High Risk of Hearing Loss"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/akhil-yerabati-Q2uV5TkjNz8-unsplash-450x255.jpg"} type={"gadgets"} />
-            <EditorsPickCard number={"2"} title={"Telescope is Revealing the Galaxies of the Universe Like Never Before"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/greg-rakozy-oMpAz-DN-9I-unsplash-450x300.jpg"} type={"technology"} />
-            <EditorsPickCard number={"3"} title={"CarPlay Concept Shows Off a Modular UI Inspired by Next-Gen Design"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_429887216_XL-1-450x289.jpg"} type={"phones"} />
-            <EditorsPickCard number={"4"} title={"Latest Windows 11 Preview Build Finally Lets You Search for Copied Text"} img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/sunrise-king-NK-cB-l1cv0-unsplash-1-450x271.jpg"} type={"technology"} />
-
+            <div className='flex w-full justify-between'>
+              {editorCardsData.length > 0 &&
+                editorCardsData.map((data, index) => (
+                  <EditorsPickCard
+                    key={data._id}
+                    title={data.title}
+                    number={index + 1}
+                    img={urlFor(data.mainImage).url()}
+                    type={data.type}
+                  />
+                ))
+              }
+            </div>
           </div>
         </div>
       </section>
