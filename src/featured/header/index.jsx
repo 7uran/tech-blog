@@ -5,9 +5,11 @@ import { IoSearch } from "react-icons/io5";
 import { Link, useNavigate } from 'react-router-dom';
 import Sidebar from '../../components/Sidebar';
 import TechnologyCard from '../../components/TechnologyCard';
+import { CiSun } from "react-icons/ci";
 
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState('Home');
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const navigate = useNavigate();
 
   const handleMenuClick = (menuName, path) => {
@@ -15,14 +17,25 @@ const Header = () => {
     navigate(path);
   };
 
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    document.body.classList.toggle('dark-mode', !isDarkMode);
+  };
+
   return (
-    <header className='bg-gray-50 h-[68px] flex items-center font-outfit shadow-lg'>
+    <header className={`h-[68px] flex items-center font-outfit shadow-lg ${isDarkMode ? 'bg-black text-white' : 'bg-gray-50 text-black'}`}>
       <div className='flex items-center justify-between container mx-auto max-w-[1260px]'>
         <div className='flex items-center gap-12'>
           <div className='flex items-center gap-2'>
             <Sidebar />
-            <img src='https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/1techblog-logo.png' alt='logo' />
+            <img
+              src={isDarkMode
+                ? 'https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/techblog-logo-dark.png'
+                : 'https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/1techblog-logo.png'}
+              alt='logo'
+            />
           </div>
+
           <div className='flex'>
             <ul className='flex items-center gap-6 font-semibold'>
               <li
@@ -35,14 +48,14 @@ const Header = () => {
                 className={`cursor-pointer transition hover:border-b-custom-blue border-b-2 border-b-transparent flex items-center py-5 gap-2 ${activeMenu === 'Features' ? 'border-b-custom-blue' : ''}`}
                 onClick={() => handleMenuClick('Features', '')}
               >
-                Features <TfiAngleDown className='text-[10px] text-custom-blue ' />
+                Features <TfiAngleDown className={`text-[10px] ${isDarkMode ? 'text-white' : 'text-custom-blue'}`} />
               </li>
               <div className="relative group">
-                <Link className="text-black   cursor-pointer">
-                  <p className='flex items-center  py-[25%] group-hover:border-b-2 border-b-custom-blue '>Technology <TfiAngleDown className='text-[10px] text-custom-blue ' />
+                <Link className="cursor-pointer">
+                  <p className='flex items-center py-[25%] group-hover:border-b-2 border-b-custom-blue'>Technology <TfiAngleDown className={`text-[10px] ${isDarkMode ? 'text-white' : 'text-custom-blue'}`} />
                   </p>
                 </Link>
-                <div className="z-50 absolute transform-translate-y-[50%] transform -translate-x-[47%] top-full p-4 w-[1260px] flex justify-between bg-white shadow-lg  ml-[135%] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
+                <div className={`z-50 absolute transform-translate-y-[50%] transform -translate-x-[47%] top-full p-4 w-[1260px] flex justify-between shadow-lg ml-[135%] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto border ${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
                   <TechnologyCard img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/Depositphotos_242235046_xl-2015-1-450x256.jpg"} title={"Is the Hyperloop Doomed? What Elon Musk’s Latest Setback Really Means"} />
                   <TechnologyCard img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/remy_loz-3vVzdb8KKIw-unsplash-450x300.jpg"} title={"The Best Early Black Friday Deals on Gaming Laptops and Accessories"} />
                   <TechnologyCard img={"https://smartmag.theme-sphere.com/tech-blog/wp-content/uploads/sites/35/2022/11/pexels-bogdan-glisik-1661469-1-450x390.jpg"} title={"Apple Watch’s ECG Can Help Diagnose Heart Problem: Research"} />
@@ -60,11 +73,11 @@ const Header = () => {
                 className={`cursor-pointer transition hover:border-b-custom-blue border-b-2 border-b-transparent flex items-center py-5 gap-2 ${activeMenu === 'Phones' ? 'border-b-custom-blue' : ''}`}
                 onClick={() => handleMenuClick('Phones', '')}
               >
-                Phones <TfiAngleDown className='text-[10px] text-custom-blue ' />
+                Phones <TfiAngleDown className={`text-[10px] ${isDarkMode ? 'text-white' : 'text-custom-blue'}`} />
               </li>
               <li
-                className={`cursor-pointer transition hover:border-b-custom-blue border-b-2 border-b-transparent flex items-center py-5 gap-2 ${activeMenu === 'Phones' ? 'border-b-custom-blue' : ''}`}
-                onClick={() => handleMenuClick('Phones', '')}
+                className={`cursor-pointer transition hover:border-b-custom-blue border-b-2 border-b-transparent flex items-center py-5 gap-2 ${activeMenu === 'Buy Theme' ? 'border-b-custom-blue' : ''}`}
+                onClick={() => handleMenuClick('Buy Theme', '')}
               >
                 Buy Theme
               </li>
@@ -72,10 +85,11 @@ const Header = () => {
           </div>
         </div>
         <div className='flex items-center gap-3'>
-          <button className='bg-custom-blue text-white rounded-md px-4 py-2 text-xs font-bold'>
+          <button className={`rounded-md px-4 py-2 text-xs font-bold bg-custom-blue text-white`}>
             SUBSCRIBE
           </button>
-          <BiMoon className='text-xl' />
+          <button>{isDarkMode ? <CiSun className='text-xl cursor-pointer' onClick={toggleDarkMode} /> : <BiMoon className='text-xl cursor-pointer' onClick={toggleDarkMode} />}
+          </button>
           <IoSearch className='text-xl' />
         </div>
       </div>
